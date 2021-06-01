@@ -1,0 +1,14 @@
+{
+  "name": "tailwindcss-word-spacing",
+  "version": "1.0.0",
+  "description": "tailwindcss plugin project for word spacing",
+  "main": "index.js",
+  "repository": "https://github.com/go2zo/tailwindcss-word-spacing/",
+  "author": "Kim Jiho",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "tailwindcss": "^2.1.2"
+  }
+}
