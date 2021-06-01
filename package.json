@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "description": "tailwindcss plugin project for word spacing",
   "main": "index.js",
-  "repository": "https://github.com/go2zo/tailwindcss-word-spacing/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/go2zo/tailwind-plugin-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/go2zo/tailwind-plugin-example/issues"
+  },
+  "homepage": "https://github.com/go2zo/tailwind-plugin-example#readme",
   "author": "Kim Jiho",
   "license": "MIT",
   "private": false,
@@ -39,6 +46,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "format": "prettier --write --loglevel=error . !CHANGELOG.md",
     "test": "jest",
     "test:watch": "jest --watch"
   }
