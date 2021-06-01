@@ -4,7 +4,7 @@
   "description": "tailwindcss plugin project for word spacing",
   "main": "index.js",
   "repository": "https://github.com/go2zo/tailwindcss-word-spacing/",
-  "author": "Kim Jiho <go2zo.ooo@gmail.com>",
+  "author": "Kim Jiho",
   "license": "MIT",
   "private": false,
   "dependencies": {
@@ -16,21 +16,30 @@
     "eslint-config-airbnb-base": "14.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-prettier": "^3.4.0",
     "husky": ">=6",
+    "jest": "^27.0.3",
+    "jest-matcher-css": "^1.1.0",
     "lint-staged": ">=10",
     "prettier": "2.3.0"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": [
+        "lint-staged",
+        "yarn test"
+      ]
     }
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix",
-    "*.{js,css,md,json,html}": "prettier --write"
+    "*.{js,css,md,json}": "prettier --write --loglevel=error . !CHANGELOG.md"
   },
   "scripts": {
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "test": "jest",
+    "test:watch": "jest --watch"
   }
 }
